@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Core/">
+   <Project Path="src/Core/PuppyWorld.Domain/PuppyWorld.Domain.csproj" />
+   <Project Path="src/Core/PuppyWorld.InboundPorts/PuppyWorld.InboundPorts.csproj" Id="de95e17a-4870-42fa-a6ce-ebdb2565e378" />
+   <Project Path="src/Core/PuppyWorld.OutboundPorts/PuppyWorld.OutboundPorts.csproj" Id="e814b298-b45e-4ed0-85b7-d5ea101d3479" />
+   <Project Path="src/Core/PuppyWorld.Application/PuppyWorld.Application.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="src/Infrastructure/PuppyWorld.Infrastructure/PuppyWorld.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="src/Presentation/PuppyWorld.API/PuppyWorld.API.csproj" Id="051a6554-5baf-46cf-8bb0-4a72a1dd6546" />
+    <Project Path="src/Presentation/PuppyWorld.UI/PuppyWorld.UI.csproj" Id="2f573711-e203-43e6-8764-ea7ba6947ad9" />
+  </Folder>
+ </Solution>
