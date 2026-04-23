@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace PuppyWorld.InboundPorts
 {
-    public interface IExampleApplicationService
+    public interface IExampleApplication
     {
+        public Task AddPetExample(PetExampleRequest request);
+
         public Task<IEnumerable<PetExampleResponse>> GetPets();
     }
 }

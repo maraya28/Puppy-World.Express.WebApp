@@ -1,17 +1,21 @@
-﻿using PuppyWorld.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using PuppyWorld.Domain;
 using PuppyWorld.OutboundPorts;
 
 namespace PuppyWorld.Infrastructure.Persistance
 {
-    public class ExampleRepository : IExampleRepository
+    internal class ExampleRepository(PuppyWorldDbContext puppyWorldDb) : IExampleRepository
     {
-        public async Task<List<PetExample>> GetPets()
+        public async Task AddPetExample(PetExample model)
         {
-            var result = new List<PetExample>()
-            {
-                new PetExample() { Name ="Thor", Breed = "Yorkshire" }
-            };
-            return await Task.FromResult(result);
+            await puppyWorldDb.AddAsync(model);
+            await puppyWorldDb.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<PetExample>> GetPets()
+        {
+            var result = await puppyWorldDb.PetExamples.ToListAsync();
+            return result;
         }
     }
 }
