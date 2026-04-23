@@ -1,8 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PuppyWorld.InboundPorts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PuppyWorld.Application.Extensions
 {
@@ -10,7 +7,7 @@ namespace PuppyWorld.Application.Extensions
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IExampleApplicationService, ExampleApplicationService>();
+            services.AddScoped<IExampleApplication, ExampleApplication>();
             return services;
         }
     }

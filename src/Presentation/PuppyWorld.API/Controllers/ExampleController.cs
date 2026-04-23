@@ -5,12 +5,18 @@ namespace PuppyWorld.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ExampleController(IExampleApplicationService exampleApplicationService) : ControllerBase
+    public class ExampleController(IExampleApplication exampleApplication) : ControllerBase
     {
-        [HttpGet]
+        [HttpPost("AddPetExample")]
+        public async Task AddPetExample(PetExampleRequest request)
+        {
+            await exampleApplication.AddPetExample(request);
+        }
+
+        [HttpGet("PetsExample")]
         public async Task<IEnumerable<PetExampleResponse>> GetPets()
         {
-            return await exampleApplicationService.GetPets();
+            return await exampleApplication.GetPets();
         }
     }
 }
