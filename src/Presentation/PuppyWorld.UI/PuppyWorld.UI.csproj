@@ -7,4 +7,9 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\PuppyWorld.Application\PuppyWorld.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\PuppyWorld.Infrastructure\PuppyWorld.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
