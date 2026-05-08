@@ -1,9 +1,6 @@
 ﻿namespace PuppyWorld.Domain
 {
-    /// <summary>
-    /// Dummy class for test purpouses
-    /// </summary>
-    public class PetExample
+    public class Pet
     {
         public Guid Id { get; set; }
 
@@ -14,5 +11,9 @@
         public int Weight { get; set; }
 
         public string? Comments { get; set; }
+
+        public PetStatus Status { get; set; }
+
+        public required Owner Owner { get; set; }
     }
 }
